@@ -8,7 +8,7 @@
 <meta property="og:title" content="Georgi Kocharkov">
 <meta property="og:description" content="Economist. Macroeconomics, Public Economics, Household Finance.">
 <meta property="og:url" content="https://kocharkov.com">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231b2a41'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23f4efe6'>K</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23e4665c'/><text x='16' y='21.5' font-family='Helvetica,Arial,sans-serif' font-size='14' font-weight='700' letter-spacing='-0.5' text-anchor='middle' fill='%23ffffff'>GK</text></svg>">
 <style>
   :root{
     --bg:#f7f5f0; --paper:#ffffff; --ink:#1c1c1c; --muted:#5f6368; --line:#e3dfd6;
@@ -18,6 +18,13 @@
     :root{ --bg:#141518; --paper:#1c1e23; --ink:#ebe8e1; --muted:#a4a8b0; --line:#2b2f37; --navy:#eef1f6; --accent:#f08a80; --link:#8fbbe8; }
   }
   *{box-sizing:border-box}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0.18 0'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.015' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0 0.5 0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='1000' height='1000' filter='url(%23b)'/%3E%3Crect width='1000' height='1000' filter='url(%23g)'/%3E%3C/svg%3E");background-size:1000px 1000px}
+  #prog{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent);transition:width .1s linear}
+  .now{margin:0;padding:14px 16px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:6px;background:var(--paper);font-size:.95rem}
+  .now b{color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;margin-right:10px}
+  .now ul{margin:6px 0 0;padding-left:18px}
+  .now li{margin:2px 0}
+  .now .upd{color:var(--muted);font-size:.8rem;margin-left:8px}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Open Sans","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
   a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent}
@@ -78,14 +85,23 @@
   <li><a href="#about">About</a></li>
   <li><a href="#research">Research</a></li>
   <li><a href="#policy">Policy</a></li>
-  <li><a href="#activities">Activities</a></li>
-</ul></div></nav>
+</ul></div><div id="prog"></div></nav>
 
 <main class="wrap">
 
+<section id="now" style="padding-top:28px">
+  <div class="now"><b>Now</b><span class="upd">October 2026</span>
+    <ul>
+      <li>Back at the Bundesbank Research Centre after two years at the ECB</li>
+      <li>Working on household expectations and consumption with the ECB Consumer Expectations Survey</li>
+      <li>Preparing the 2027 Annual Conference of the Bulgarian Council for Economic Analyses</li>
+    </ul>
+  </div>
+</section>
+
 <section id="about" class="about">
   <h2>About</h2>
-  <p>I am a Senior Economist at the Research Centre of the Deutsche Bundesbank in Frankfurt. From 2024 to 2026 I was a Senior Economist at the European Central Bank, working on the Consumer Expectations Survey. Before joining the Bundesbank in 2019, I was Assistant Professor of Economics at Goethe University Frankfurt and at the University of Konstanz.</p>
+  <p>I am an economist at the Bundesbank Research Centre in Frankfurt. From 2024 to 2026 I was at the European Central Bank, working on the Consumer Expectations Survey. Before joining the Bundesbank in 2019, I was Assistant Professor of Economics at Goethe University Frankfurt and at the University of Konstanz.</p>
   <p>My research uses quantitative macroeconomic models and household survey data to study fiscal policy, taxation, housing and wealth, and family economics. I hold a Ph.D. in Economics from Universidad Carlos III de Madrid.</p>
   <p>Since 2023 I have been a member of the Bulgarian Council for Economic Analyses, an advisory body to the Council of Ministers of the Republic of Bulgaria.</p>
 </section>
@@ -210,14 +226,6 @@
   </ol>
 </section>
 
-<section id="activities">
-  <h2>Conference Organization</h2>
-  <ul class="list">
-    <li><span>Bulgarian Council for Economic Analyses Annual Conference (<a href="BCEA_Conference_Program_2024.pdf">2024 programme</a>, <a href="BCEA_Conference_Program_2023.pdf">2023 programme</a>)</span><span class="when">2023 – 2025</span></li>
-    <li><span>Frankfurt Macro Seminar (<a href="FMS_Program_May_2024.pdf">May 2024 programme</a>)</span><span class="when">2024</span></li>
-    <li><span>International Conference on Household Finance, Deutsche Bundesbank</span><span class="when">2021, 2023</span></li>
-  </ul>
-</section>
 
 </main>
 
@@ -225,5 +233,8 @@
   <p>© 2014–2026 Georgi Kocharkov</p>
   <p>The views expressed on this website are my own and do not necessarily reflect those of the Deutsche Bundesbank or the Eurosystem.</p>
 </footer>
+<script>
+(function(){var p=document.getElementById('prog');function u(){var d=document.documentElement,h=d.scrollHeight-d.clientHeight;p.style.width=(h>0?100*d.scrollTop/h:0)+'%';}addEventListener('scroll',u,{passive:true});u();})();
+</script>
 </body>
 </html>
