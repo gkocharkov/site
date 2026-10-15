@@ -11,49 +11,48 @@
 <meta property="og:url" content="https://kocharkov.com">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231b2a41'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23f4efe6'>K</text></svg>">
 <style>
-  :root{
-    --bg:#d9d8d4; --paper:#ecebe7; --ink:#222; --muted:#5a5a57; --line:#c4c3bd;
-    --navy:#2a2f36; --accent:#7a5a3a; --link:#2f5a8a;
-  }
-  body{background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='1200' height='1200' filter='url(%23b)'/%3E%3Crect width='1200' height='1200' filter='url(%23g)'/%3E%3C/svg%3E");background-size:1200px 1200px;background-attachment:fixed}
+  :root{ --bg:#eceae8; --paper:#f4f3f1; --ink:#2b2b2b; --muted:#5f5f5d; --line:#2b2b2b; --accent:#e4665c; --link:#2b2b2b; }
+  body{background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.02' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='1200' height='1200' filter='url(%23b)'/%3E%3Crect width='1200' height='1200' filter='url(%23g)'/%3E%3C/svg%3E");background-size:1200px 1200px;background-attachment:fixed}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;color:var(--ink);font:17px/1.6 Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
-  a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent}
-  a:hover{border-bottom-color:currentColor}
-  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
-  header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
-  .hero{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap}
-  .hero img{width:150px;height:150px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--paper);box-shadow:0 3px 14px rgba(0,0,0,.22)}
-  h1{font-size:2.3rem;margin:0 0 6px;letter-spacing:-.01em;color:var(--navy);font-weight:600}
-  .role{margin:0;font-size:1.05rem}
-  .role small{display:block;color:var(--muted);font-size:.95rem}
-  .fields{margin:12px 0 0;color:var(--accent);font-style:italic}
-  .contact{margin:16px 0 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.9rem;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
-  nav{position:sticky;top:0;background:rgba(217,216,212,.92);backdrop-filter:blur(4px);border-bottom:1px solid var(--line);z-index:5}
-  nav ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:22px;flex-wrap:wrap;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
-  nav a{color:var(--ink);border:0}
-  nav a:hover{color:var(--accent)}
-  section{padding:40px 0 8px}
-  h2{font-size:1.05rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:0 0 20px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600}
-  ol.papers{list-style:none;margin:0;padding:0;counter-reset:p}
-  ol.papers li{padding:16px 0;border-top:1px solid var(--line)}
-  ol.papers li:first-child{border-top:0;padding-top:0}
-  .t{font-weight:600;color:var(--navy);font-size:1.05rem}
-  .t a{color:inherit}
-  .m{color:var(--muted);font-size:.95rem;margin-top:2px}
-  .m em{color:var(--ink)}
-  .x{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.82rem;margin-top:6px;display:flex;gap:10px;flex-wrap:wrap}
-  .x a{padding:2px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--paper)}
-  .x a:hover{color:var(--accent);border-color:var(--accent)}
-  .about p{margin:0 0 14px;max-width:70ch}
-  .list{margin:0;padding:0;list-style:none}
-  .list li{padding:8px 0;border-top:1px solid var(--line);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
-  .list li:first-child{border-top:0}
+  body{margin:0;color:var(--ink);font:16px/1.55 "Open Sans","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{color:var(--accent)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+  header{padding:56px 0 36px;text-align:center}
+  .hero{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .hero img{width:210px;height:210px;border-radius:50%;object-fit:cover;margin-bottom:22px}
+  h1{font-size:2.1rem;margin:0 0 18px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .role{margin:0;font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600;line-height:1.5}
+  .role small{display:block;font-size:.8rem;font-style:italic;font-weight:600;letter-spacing:.06em;margin-top:18px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .role small a{text-decoration:none}
+  .fields{margin:22px 0 0;font-size:1.05rem}
+  .contact{margin:4px 0 0;font-size:1.05rem;display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .contact a{text-decoration:none}
+  .contact a.cv{margin-top:18px;border:1.5px solid var(--ink);border-radius:999px;padding:6px 26px;text-transform:uppercase;letter-spacing:.2em;font-size:.95rem}
+  .contact a.cv:hover{border-color:var(--accent)}
+  hr.rule{border:0;border-top:1px solid var(--line);margin:40px 0 0}
+  nav{position:sticky;top:0;background:rgba(236,234,232,.94);backdrop-filter:blur(4px);z-index:5;border-bottom:1px solid #cfcecb}
+  nav ul{list-style:none;margin:0;padding:11px 0;display:flex;gap:26px;flex-wrap:wrap;justify-content:center;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+  nav a{text-decoration:none}
+  section{padding:44px 0 8px;text-align:center}
+  h2{font-size:1.9rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin:0 0 28px;font-weight:600}
+  h3{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;margin:0 0 24px;font-weight:600}
+  ol.papers{list-style:none;margin:0;padding:0;text-align:left}
+  ol.papers li{padding:0 0 26px}
+  .t{font-size:1.05rem}
+  .m{margin-top:2px}
+  .m .co{font-style:italic}
+  .m .j{font-weight:700;display:block}
+  .x{margin-top:2px}
+  .x a{margin-right:6px}
+  .about p{margin:0 auto 14px;max-width:62ch;text-align:left}
+  .list{margin:0;padding:0;list-style:none;text-align:left}
+  .list li{padding:8px 0;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
   .list .when{color:var(--muted);font-size:.9rem;white-space:nowrap}
-  footer{margin-top:48px;padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+  footer{margin-top:48px;padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;text-align:center}
   footer p{margin:0 0 8px}
-  @media (max-width:560px){ h1{font-size:1.9rem} header{padding-top:36px} .hero img{width:110px;height:110px} }
+  @media (max-width:560px){ h1{font-size:1.7rem} .hero img{width:190px;height:190px} h2{font-size:1.6rem} }
 </style>
 </head>
 <body>
@@ -64,13 +63,12 @@
       <h1>Georgi Kocharkov</h1>
       <p class="role">Senior Economist, Research Centre, Deutsche Bundesbank
         <small>Member of the <a href="https://cea.egov.bg/wps/portal/cea-web-en/home">Bulgarian Council for Economic Analyses</a></small></p>
-      <p class="fields">Macroeconomics · Public Economics · Household Finance</p>
-      <p class="contact">
-        <a href="mailto:georgi@kocharkov.com">georgi@kocharkov.com</a>
-        <a href="cv.pdf">CV (PDF)</a>
-      </p>
+      <p class="fields">Macroeconomics, Public Economics, Household Finance</p>
+      <p class="contact"><a href="mailto:georgi@kocharkov.com">georgi@kocharkov.com</a></p>
+      <p class="contact"><a class="cv" href="cv.pdf">CV</a></p>
     </div>
   </div>
+  <div class="wrap"><hr class="rule"></div>
 </header>
 
 <nav><div class="wrap"><ul>
@@ -90,67 +88,68 @@
 </section>
 
 <section id="research">
-  <h2>Publications</h2>
+  <h2>Research</h2>
+  <h3>Publications</h3>
   <ol class="papers">
     <li>
       <div class="t"><a href="kks.pdf">Understanding Spatial House Price Dynamics in a Housing Boom</a></div>
-      <div class="m">with Leo Kaas and Nicolas Syrichas. <em>Economic Theory</em>, 2026</div>
+      <div class="m"><span class="co">with Leo Kaas and Nicolas Syrichas</span><span class="j">Economic Theory, 2026</span></div>
     </li>
     <li>
       <div class="t"><a href="bbgklw.pdf">A Temporary VAT Cut as Unconventional Fiscal Policy</a></div>
-      <div class="m">with Rüdiger Bachmann, Benjamin Born, Olga Goldfayn-Frank, Ralph Lütticke and Michael Weber. <em>Review of Economic Studies</em>, 2026</div>
+      <div class="m"><span class="co">with Rüdiger Bachmann, Benjamin Born, Olga Goldfayn-Frank, Ralph Lütticke and Michael Weber</span><span class="j">Review of Economic Studies, 2026</span></div>
       <div class="x"><a href="https://bfi.uchicago.edu/insight/finding/a-temporary-vat-cut-as-unconventional-fiscal-policy/">Becker Friedman Institute</a><a href="https://voxeu.org/article/temporary-vat-cut-unconventional-fiscal-policy">VoxEU</a><a href="https://www.nber.org/digest-202201/german-consumption-tax-cut-boosted-spending-during-pandemic">NBER Digest</a></div>
     </li>
     <li>
       <div class="t"><a href="dkstw.pdf">Taxation of Top Incomes and Tax Avoidance</a></div>
-      <div class="m">with Alessandro Di Nola, Almuth Scholl, Anna-Mariia Tkhir and Haomin Wang. <em>International Economic Review</em>, 66(3), 983–1018, 2025</div>
+      <div class="m"><span class="co">with Alessandro Di Nola, Almuth Scholl, Anna-Mariia Tkhir and Haomin Wang</span><span class="j">International Economic Review, 66(3), 983–1018, 2025</span></div>
       <div class="x"><a href="https://www.suerf.org/publications/suerf-policy-notes-and-briefs/taxation-of-top-incomes-and-tax-avoidance/">SUERF Policy Brief</a></div>
     </li>
     <li>
       <div class="t"><a href="DKMH.pdf">Teenage Childbearing and the Welfare State</a></div>
-      <div class="m">with Alessandro Di Nola, Jan Mellert and Haomin Wang. <em>Macroeconomic Dynamics</em>, 29, e31, 2025</div>
+      <div class="m"><span class="co">with Alessandro Di Nola, Jan Mellert and Haomin Wang</span><span class="j">Macroeconomic Dynamics, 29, e31, 2025</span></div>
     </li>
     <li>
       <div class="t"><a href="bbgklw_AEAPP.pdf">Unconventional Fiscal Policy at Work</a></div>
-      <div class="m">with Rüdiger Bachmann, Benjamin Born, Olga Goldfayn-Frank, Ralph Lütticke and Michael Weber. <em>AEA Papers and Proceedings</em>, 113, 61–64, 2023</div>
+      <div class="m"><span class="co">with Rüdiger Bachmann, Benjamin Born, Olga Goldfayn-Frank, Ralph Lütticke and Michael Weber</span><span class="j">AEA Papers and Proceedings, 113, 61–64, 2023</span></div>
     </li>
     <li>
       <div class="t"><a href="cgc2.pdf">A Note on Contraception, Social Norms and Growth</a></div>
-      <div class="m">with Tiago Cavalcanti and Cezar Santos. <em>Macroeconomic Dynamics</em>, 27(3), 869–878, 2023</div>
+      <div class="m"><span class="co">with Tiago Cavalcanti and Cezar Santos</span><span class="j">Macroeconomic Dynamics, 27(3), 869–878, 2023</span></div>
     </li>
     <li>
       <div class="t"><a href="dkst.pdf">The Aggregate Effects of Tax Evasion</a></div>
-      <div class="m">with Alessandro Di Nola, Almuth Scholl and Anna-Mariia Tkhir. <em>Review of Economic Dynamics</em>, 40, 198–227, 2021</div>
+      <div class="m"><span class="co">with Alessandro Di Nola, Almuth Scholl and Anna-Mariia Tkhir</span><span class="j">Review of Economic Dynamics, 40, 198–227, 2021</span></div>
     </li>
     <li>
       <div class="t"><a href="cgc.pdf">Family Planning and Development: Aggregate Effects of Contraceptive Use</a></div>
-      <div class="m">with Tiago Cavalcanti and Cezar Santos. <em>Economic Journal</em>, 131(634), 624–657, 2021</div>
+      <div class="m"><span class="co">with Tiago Cavalcanti and Cezar Santos</span><span class="j">Economic Journal, 131(634), 624–657, 2021</span></div>
       <div class="x"><a href="cgc_online.pdf">Online Appendix</a></div>
     </li>
     <li>
       <div class="t"><a href="kkps.pdf">Low Homeownership in Germany: A Quantitative Exploration</a></div>
-      <div class="m">with Leo Kaas, Edgar Preugschat and Nawid Siassi. <em>Journal of the European Economic Association</em>, 19(1), 128–164, 2021</div>
+      <div class="m"><span class="co">with Leo Kaas, Edgar Preugschat and Nawid Siassi</span><span class="j">Journal of the European Economic Association, 19(1), 128–164, 2021</span></div>
       <div class="x"><a href="https://www.bundesbank.de/resource/blob/822176/c929042d20f1a659fc7cf6bf7a5462d0/mL/2020-30-research-brief-data.pdf">Bundesbank Research Brief</a></div>
     </li>
     <li>
       <div class="t"><a href="dkv_BEJM.pdf">Envelope Wages, Hidden Production and Labor Productivity</a></div>
-      <div class="m">with Alessandro Di Nola and Aleksandar Vasilev. <em>B.E. Journal of Macroeconomics</em>, 19(2), 1–30, 2019</div>
+      <div class="m"><span class="co">with Alessandro Di Nola and Aleksandar Vasilev</span><span class="j">B.E. Journal of Macroeconomics, 19(2), 1–30, 2019</span></div>
     </li>
     <li>
       <div class="t"><a href="kkp_AES.pdf">Wealth Inequality and Homeownership in Europe</a></div>
-      <div class="m">with Leo Kaas and Edgar Preugschat. <em>Annals of Economics and Statistics</em>, 136, 27–54, 2019</div>
+      <div class="m"><span class="co">with Leo Kaas and Edgar Preugschat</span><span class="j">Annals of Economics and Statistics, 136, 27–54, 2019</span></div>
     </li>
     <li>
       <div class="t"><a href="kkp_AEL.pdf">Does Homeownership Promote Wealth Accumulation?</a></div>
-      <div class="m">with Leo Kaas and Edgar Preugschat. <em>Applied Economics Letters</em>, 26(14), 1186–1191, 2019</div>
+      <div class="m"><span class="co">with Leo Kaas and Edgar Preugschat</span><span class="j">Applied Economics Letters, 26(14), 1186–1191, 2019</span></div>
     </li>
     <li>
       <div class="t"><a href="ggks_AEJMacro.pdf">Technology and the Changing Family: A Unified Model of Marriage, Divorce, Educational Attainment and Married Female Labor-Force Participation</a></div>
-      <div class="m">with Jeremy Greenwood, Nezih Guner and Cezar Santos. <em>American Economic Journal: Macroeconomics</em>, 8(1), 1–41, 2016</div>
+      <div class="m"><span class="co">with Jeremy Greenwood, Nezih Guner and Cezar Santos</span><span class="j">American Economic Journal: Macroeconomics, 8(1), 1–41, 2016</span></div>
     </li>
     <li>
       <div class="t"><a href="ggksPandP_Revised_Version.pdf">Marry Your Like: Assortative Mating and Income Inequality</a></div>
-      <div class="m">with Jeremy Greenwood, Nezih Guner and Cezar Santos. <em>American Economic Review: Papers &amp; Proceedings</em>, 104(5), 348–353, 2014</div>
+      <div class="m"><span class="co">with Jeremy Greenwood, Nezih Guner and Cezar Santos</span><span class="j">American Economic Review: Papers &amp; Proceedings, 104(5), 348–353, 2014</span></div>
       <div class="x"><a href="ggksPandP.pdf">Old version</a><a href="ggksPandP_Corrigendum.pdf">Corrigendum</a></div>
     </li>
   </ol>
