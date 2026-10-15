@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Georgi Kocharkov</title>
+<meta name="color-scheme" content="light only">
 <meta name="description" content="Georgi Kocharkov, Senior Economist at the Research Centre of the Deutsche Bundesbank. Macroeconomics, public economics, household finance.">
 <meta property="og:title" content="Georgi Kocharkov">
 <meta property="og:description" content="Economist. Macroeconomics, Public Economics, Household Finance.">
@@ -11,27 +12,25 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231b2a41'/><text x='16' y='22' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23f4efe6'>K</text></svg>">
 <style>
   :root{
-    --bg:#f7f5f0; --paper:#ffffff; --ink:#1c1c1c; --muted:#5f6368; --line:#e3dfd6;
-    --navy:#1b2a41; --accent:#9a5b2f; --link:#1b4f8a;
+    --bg:#d9d8d4; --paper:#ecebe7; --ink:#222; --muted:#5a5a57; --line:#c4c3bd;
+    --navy:#2a2f36; --accent:#7a5a3a; --link:#2f5a8a;
   }
-  @media (prefers-color-scheme: dark){
-    :root{ --bg:#141518; --paper:#1c1e23; --ink:#ebe8e1; --muted:#a4a8b0; --line:#2b2f37; --navy:#dfe6f2; --accent:#d6a06b; --link:#8fbbe8; }
-  }
+  body{background-color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006' numOctaves='4' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.11 0'/%3E%3C/filter%3E%3Crect width='1200' height='1200' filter='url(%23b)'/%3E%3Crect width='1200' height='1200' filter='url(%23g)'/%3E%3C/svg%3E");background-size:1200px 1200px;background-attachment:fixed}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
+  body{margin:0;color:var(--ink);font:17px/1.6 Georgia,"Times New Roman",serif;-webkit-font-smoothing:antialiased}
   a{color:var(--link);text-decoration:none;border-bottom:1px solid transparent}
   a:hover{border-bottom-color:currentColor}
   .wrap{max-width:860px;margin:0 auto;padding:0 20px}
   header{padding:56px 0 32px;border-bottom:1px solid var(--line)}
   .hero{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap}
-  .hero img{width:150px;height:150px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--paper);box-shadow:0 2px 10px rgba(0,0,0,.12)}
+  .hero img{width:150px;height:150px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--paper);box-shadow:0 3px 14px rgba(0,0,0,.22)}
   h1{font-size:2.3rem;margin:0 0 6px;letter-spacing:-.01em;color:var(--navy);font-weight:600}
   .role{margin:0;font-size:1.05rem}
   .role small{display:block;color:var(--muted);font-size:.95rem}
   .fields{margin:12px 0 0;color:var(--accent);font-style:italic}
   .contact{margin:16px 0 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.9rem;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
-  nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+  nav{position:sticky;top:0;background:rgba(217,216,212,.92);backdrop-filter:blur(4px);border-bottom:1px solid var(--line);z-index:5}
   nav ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:22px;flex-wrap:wrap;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
   nav a{color:var(--ink);border:0}
   nav a:hover{color:var(--accent)}
