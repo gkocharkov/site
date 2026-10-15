@@ -40,7 +40,7 @@
   .fields{margin:12px 0 0;color:var(--muted);font-style:italic}
   .contact{margin:16px 0 0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.9rem;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap}
   nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
-  nav ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:22px;flex-wrap:wrap;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
+  nav ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:18px;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em}
   nav a{color:var(--ink);border:0}
   nav a:hover{color:var(--accent)}
   section{padding:40px 0 8px}
@@ -62,7 +62,7 @@
   .list .when{color:var(--muted);font-size:.9rem;white-space:nowrap}
   footer{margin-top:48px;padding:28px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
   footer p{margin:0 0 8px}
-  @media (max-width:560px){ h1{font-size:1.45rem} header{padding-top:32px} .hero{gap:16px;align-items:center} .hero img{width:92px;height:92px} .role{font-size:.95rem} .fields{font-size:.9rem} }
+  @media (max-width:560px){ h1{font-size:1.45rem} header{padding-top:32px} .hero{gap:16px;align-items:flex-start} .hero img{width:92px;height:92px;margin-top:4px} .role{font-size:.95rem} .fields{font-size:.9rem} }
 </style>
 </head>
 <body>
