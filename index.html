@@ -274,6 +274,10 @@
   <p>The views expressed on this website are my own and do not necessarily reflect those of the Deutsche Bundesbank or the Eurosystem.</p>
 </footer>
 <script>
+// On touch devices (phones, tablets) open links in the same tab
+if (window.matchMedia && matchMedia('(pointer: coarse)').matches) {
+  document.querySelectorAll('a[target="_blank"]').forEach(function(a){ a.removeAttribute('target'); });
+}
 (function(){var p=document.getElementById('prog');function u(){var d=document.documentElement,h=d.scrollHeight-d.clientHeight;p.style.width=(h>0?100*d.scrollTop/h:0)+'%';}addEventListener('scroll',u,{passive:true});u();})();
 </script>
 </body>
